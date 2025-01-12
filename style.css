@@ -17,7 +17,7 @@ html, body {
     overflow: hidden; 
 }
 .glowne{
-    height:100vh;
+    min-height:100vh;
     display:flex;
     flex-direction: column;
     justify-content: center;
@@ -310,6 +310,9 @@ header nav ul li a:hover {
     flex: 1;
 }
 @media screen and (max-width:992px){
+    .glowne{
+        display:block;
+    }
     .featured {
         margin-top:50px;
         position: relative;
@@ -396,7 +399,7 @@ header nav ul li a:hover {
 }
 
 .news h1{
-    font-size: 3rem;
+    font-size: clamp(1.2rem, 3vw, 3rem);
     letter-spacing: 5px;
 }
 .news #videos {
