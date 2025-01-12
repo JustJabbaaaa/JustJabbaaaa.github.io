@@ -1,0 +1,174 @@
+body {
+    color: #fff;
+}
+
+main {
+    padding: 100px 50px;
+    max-width: 1200px;
+    margin: 80px auto;
+}
+
+.liga {
+    margin-bottom:-50px;
+    padding: 30px;
+    background-color: #272734;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    
+}
+
+
+.liga h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #f2cd00;
+    text-align: center;
+}
+
+.info .title{
+    text-align:center;
+    color:white;
+    font-size:1.5rem;
+    font-weight:500;
+    text-transform:uppercase;
+    letter-spacing:2px;
+    margin:1.5rem;
+}
+
+.group-stage h2, .teams h2{
+    font-size: 1.5rem;
+    margin-top: 18px;
+    color: #f2cd00;
+}
+.teams{
+    display:grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap:1rem;
+}
+.teams .panel {
+    display:none;
+}
+.team {
+    border: 1px solid #f2cd00;
+    border-radius: 1rem;
+    height:250px;
+    cursor:pointer;
+}
+.team:hover{
+    scale: 1.05;
+    transition: all 0.2s ease-in-out;
+    box-shadow: 0 3px 10px #f2cd00;
+    background-color: #2b2b3a
+}
+.team-info {
+    height:250px;
+    display:flex;
+    flex-direction: column;
+    align-items:center;
+    justify-content:center;
+    gap:10px;
+}
+.team-info h2{
+    text-align:center;
+}
+.team-players{
+    height:250px;
+    display:flex;
+    flex-direction: column;
+    align-items:center;
+    justify-content:center;
+    gap:1rem;
+}
+.team-info img{
+    margin:20px;
+    width:100px;
+}
+.team-name img{
+    height:2rem;
+}
+.team-name{
+    display:flex;
+    flex-direction: row;
+    align-items:center;
+    justify-content: center;
+    gap:1rem;
+}
+.linia{
+    display:grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+@media screen and (max-width:1211px){
+    .teams{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media screen and (max-width:840px){
+    .teams{
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+.linia img{
+    height:2rem;
+    margin:auto;
+}
+.linia h3{
+    text-align: left;
+}
+.group-stage {
+    margin-top:3rem;
+}
+.group-stage p {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+}
+
+.group-stage img {
+    display:block;
+    margin:0 auto;
+    max-width: 75%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+footer {
+    text-align: center;
+    padding: 20px 0;
+    background: #272734;
+    border-top: 1px solid #f2cd00;
+    margin-top: 50px;
+}
+#druga{
+    display:none;
+}
+.liga .przyciski{
+    display:flex;
+    justify-content:center;
+    
+}
+.liga .przyciski button {
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size:1rem;
+    text-decoration:none;
+    font-family: "Mulish", sans-serif;
+    color:#f2cd00;
+    border:1px solid #f2cd00;
+    background-color: #272734;
+    margin:0 1rem;
+    padding:.5rem 1rem;
+    border-radius:.6rem;
+    cursor:pointer;
+    letter-spacing: 3px;
+
+}
+.liga .przyciski button.active{
+    color:#272734;
+    background-color: rgb(242, 205, 0);
+    box-shadow: 0 2px 10px rgba(242, 205, 0, 0.25);
+}
+.liga .przyciski button:hover{
+    transform:scale(1.1);
+    box-shadow: 0 2px 10px rgba(242, 205, 0, 0.25);
+}

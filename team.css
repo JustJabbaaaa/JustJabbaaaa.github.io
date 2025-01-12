@@ -1,0 +1,180 @@
+body {
+    font-family: 'Mulish', sans-serif;
+    background-color: #f4f7fa;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+.contact-hero {
+    color: white;
+    padding: 60px 20px;
+    text-align: center;
+    margin-top: 80px;
+    margin-bottom: -60px;
+}
+
+.contact-hero h1 {
+    font-size:clamp(2rem, 3vw, 4.8rem);
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: #f2cd00;
+    letter-spacing: 5px;
+}
+
+.contact-hero p {
+    font-size:clamp(1rem, 3vw, 1.2rem);
+    max-width: 1500px;
+    padding: 20px;
+    margin: 0 auto;
+    font-weight: 500;
+    text-shadow: #000 0px 0px 10px;
+    line-height: 1.8;
+    letter-spacing: px;
+}
+
+main.collaboration {
+    padding: 40px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+}
+
+
+.role-carousel {
+    overflow: hidden;
+    position: relative;
+}
+
+.role-container {
+    transition: transform 0.3s ease;
+}
+
+.role {
+    background-color: #272734;
+    margin: 0; /* Usuwamy marginesy */
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    color: white;
+    max-width: 100%;
+    min-height:400px;
+    overflow: hidden;
+}
+
+
+.role:hover {
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+.role h2 {
+    font-size: 2rem;
+    color: #f2cd00;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-bottom: 2px solid #f2cd00;
+    padding-bottom: 10px;
+    letter-spacing: 5px;
+}
+
+.role p {
+    font-size:clamp(1rem, 3vw, 1.1rem);
+    line-height: 1.6;
+    margin:0 1rem;
+    letter-spacing: 1px;
+}
+
+
+.arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.01);;
+    color: #f2cd00;
+    border: none;
+    font-size: 2rem;
+    padding: 15px;
+    cursor: pointer;
+    z-index: 10;
+    border-radius: 50%;
+    transition: background-color 0.3s;
+}
+
+.arrow:hover {
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.arrow.left {
+    left: -80px;
+}
+
+.arrow.right {
+    right: -80px;
+}
+
+
+footer {
+    background-color: rgb(39, 39, 52);
+    color: #fff;
+    padding: 40px 20px;
+    font-size: 16px;
+    line-height: 1.6;
+    margin-top: 80px;
+    border-top: rgb(242, 205, 0) 2px solid;
+}
+.mySlides {display: none}
+img {vertical-align: middle;}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1160px;
+  position: relative;
+  margin: auto;
+}
+
+
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: #f2cd00;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.5);
+}
+
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #30303f;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #f2cd00;
+}
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .prev, .next,.text {font-size: 11px}
+}

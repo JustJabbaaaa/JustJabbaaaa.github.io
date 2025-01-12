@@ -1,0 +1,193 @@
+body {
+  color: #fff;
+}
+
+main {
+  padding: 100px 50px;
+  max-width: 1200px;
+  margin: 80px auto;
+}
+
+.hof {
+  padding: 30px;
+  background-color: #272734;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  
+}
+.hof h1 {
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  font-size: clamp(1.8rem, 3vw, 3rem);
+  margin-bottom: 20px;
+  color: #f2cd00;
+  text-align: center;
+}
+#hof {
+  padding-top: 100px;
+}
+
+.hof__content {
+  min-height: 65vh;
+}
+
+.hof__content .bg {
+  background-color: rgba(39, 39, 52, 0.3);
+}
+
+.hof__content--accordion {
+  max-height: 0; 
+  overflow: hidden; 
+  opacity: 0; 
+  transition: max-height 0.3s ease, opacity 0.3s ease;
+}
+
+.hof__content--accordion.expanded {
+  max-height: 3000px; 
+  opacity: 1;
+}
+
+.hof__content--title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 100%;
+  text-align: center;
+  cursor: pointer;
+}
+
+.hof__content--title h2 {
+  font-size: clamp(1rem, 3vw, 2.3rem);
+  width: 100%;
+}
+.iconify{
+  margin-right:10px;
+}
+.hof__content--title span {
+  color: #e4b600; /* primary color */
+  transform: scale(1.5);
+  transition: all ease-in 1s;
+}
+
+.hof__content--title span.iconify.expanded  {
+  transform: rotate(180deg) scale(1.5);
+  transition: all ease-out 1s;
+}
+ .hof__content--title h2{
+  transition: all ease-in-out 0.2s;
+  font-weight:500;
+  letter-spacing: 3px;
+}
+.hof__content--season {
+  padding: 1rem 0;
+  border-bottom: 1px solid #e4b600; /* primary color */
+  border-left: 1px solid #e4b600; /* primary color */
+  border-right: 1px solid #e4b600; /* primary color */
+}
+
+.hof__content--season p {
+  font-size: clamp(1rem, 2vw, 2rem);
+}
+
+.hof__content--season:first-child {
+  border-top: 1px solid #e4b600; /* primary color */
+  border-radius: 1rem 1rem 0 0;
+}
+
+.hof__content--season:last-child {
+  border-radius: 0 0 1rem 1rem;
+}
+
+.hof__content--season:hover {
+  background-color: rgba(86, 86, 117, 0.3); /* rgba for secondary color */
+}
+
+.hof__content--season h2:hover {
+  transform: scale(1.2);
+}
+
+.hof__content--season h3 {
+  margin: 1rem 0;
+  text-align: center;
+}
+
+.hof__content--teamName {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.hof__content--teamName img {
+  width: 300px;
+}
+
+@media screen and (max-width: 992px) {
+  .hof__content--teamName {
+    margin: 1rem 0;
+  }
+}
+
+.hof__content--winners {
+  display: grid;
+  grid-template-columns: 1fr;
+  align-items: center;
+  justify-items: center;
+}
+
+@media screen and (min-width: 992px) {
+  .hof__content--winners {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.hof__content--Player {
+  display: flex;
+  align-items: center;
+  font-size: 2rem;
+  gap: 0.5rem;
+}
+.hof__content--Player img {
+  width: 50px;
+}
+
+.hof__content--season hr{
+  border:1px solid #e4b600;
+  width:80%;
+  margin: 1rem auto;
+  border-radius:100%;
+}
+.hof__content--mentionsBox h4 {
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.hof__content--mentionsBox p {
+  text-align: center;
+}
+.hof__content--tots {
+  font-size:2rem;
+  margin:auto;
+}
+.hof__content--totsPlayers{
+  width: fit-content;
+  margin: auto;
+}
+.hof__content--totsPlayer {
+  display:grid;
+  justify-items: center;
+  align-items: center;
+  grid-template-columns: repeat(2,1fr);
+}
+.hof__content--totsPlayer img{
+  width:50px;
+}
+.hof__content--accordion {
+  display: none;
+}
+.hof__content--accordion.expanded {
+  display: block;
+}
+.hof__content--Player p, .hof__content--mentionsBox p,.hof__content--totsPlayer p{
+  color: #e4b600;
+}

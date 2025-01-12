@@ -1,0 +1,134 @@
+/* Sekcja hero */
+.contact-hero {
+    color: white;
+    padding: 60px 20px; 
+    text-align: center;
+    margin-top: 80px;
+    margin-bottom: -70px;
+
+}
+
+.contact-hero h1 {
+    font-size:clamp(2rem, 4vw, 3.8rem);
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: #f2cd00;
+    letter-spacing: 5px;
+}
+
+.contact-hero p {
+    font-size:clamp(1rem, 2vw, 1.6rem);
+    max-width: 700px;
+    margin: 0 auto;
+    line-height: 1.8;
+    letter-spacing: 2px;
+}
+
+
+/* Formularz kontaktowy */
+.contact-form {
+    background-color: #272734;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 12px;
+    padding: 40px 20px;
+    text-align: center;
+    margin: 80px auto;
+    max-width: 600px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.7); /* Subtelny cień */
+    backdrop-filter: blur(10px); /* Efekt rozmycia tła */
+    letter-spacing: 2px;
+}
+
+.contact-form h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #f2cd00; 
+    font-weight: bold;
+}
+
+.contact-form form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.contact-form label {
+    font-size: 1.2rem;
+    text-align: left;
+    color: #fff;
+    margin-bottom: 10px; 
+}
+
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 15px;
+    font-size: 1.1rem;
+    margin-top: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.05);
+    color: #fff;
+    transition: border-color 0.3s, background-color 0.3s;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: #f2cd00;
+    outline: none;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.contact-form textarea {
+    height: 120px;
+    resize: none;
+}
+
+.contact-form button {
+    padding: 15px;
+    font-size: 1.3rem;
+    background: #f2cd00;
+    color: #272734;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    font-weight: bold;
+}
+
+.contact-form button:hover {
+    background: #ffd700;
+    transform: translateY(-3px); /* Subtelne podniesienie przy najechaniu */
+}
+
+/* Animacja pojawiania się formularza */
+.contact-form {
+    animation: fadeIn 1s ease-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Drobne poprawki responsywności */
+@media (max-width: 768px) {
+    .contact-form {
+        padding: 30px 15px;
+    }
+
+    .contact-form h2 {
+        font-size: 2rem;
+    }
+
+    .contact-form button {
+        font-size: 1.2rem;
+    }
+}

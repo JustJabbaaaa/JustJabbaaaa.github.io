@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ostatnie Tweety</title>
+    <style>
+        .tweet {
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Ostatnie Tweety</h1>
+    <div id="tweets"></div>
+
+    <script>
+        const BEARER_TOKEN = 'AAAAAAAAAAAAAAAAAAAAACZayAEAAAAAdyEdmfKnkRe3cz95cp6ebX7Yubg%3DQnXbVtER9pBBwkuPTubx1ZKUlEGu7pFRN1ZyuQ1lQfcNp6FhAR'; // Wstaw tutaj swój Bearer Token
+        const USERNAME = 'AlmostPro_LoL'; // Zastąp nazwą użytkownika, którego tweety chcesz wyświetlić
+        const TWEET_COUNT = 5; // Liczba tweetów do pobrania
+
+        // Funkcja do pobierania tweetów
+        async function fetchTweets() {
+            try {
+                // Endpoint Twitter API v2 z uwzględnieniem nazwy użytkownika
+                const url = `https://api.twitter.com/2/timelines/reverse_chronological.json?user_id=${USERNAME}`;
+
+                // Wykonaj zapytanie do API Twittera
+                const response = await fetch(url, {
+                    headers: {
+                        'Authorization': `Bearer ${BEARER_TOKEN}`,
+                        'Content-Type': 'application/json'
+                    }
+                });
+
+                if (!response.ok) {
+                    throw new Error('Nie udało się pobrać tweetów');
+                }
+
+                const data = await response.json();
+                console.log(data);  // Sprawdź odpowiedź z API
+
+                displayTweets(data.data);  // Wyświetl tweety
+            } catch (error) {
+                console.error('Błąd podczas pobierania tweetów:', error);
+            }
+        }
+
+        // Funkcja do wyświetlania tweetów na stronie
+        function displayTweets(tweets) {
+            const tweetsContainer = document.getElementById('tweets');
+            tweetsContainer.innerHTML = ''; // Czyść zawartość przed dodaniem nowych tweetów
+
+            tweets.forEach(tweet => {
+                const tweetElement = `
+                    <div class="tweet">
+                        <p><strong>${tweet.text}</strong></p>
+                        <small>${new Date(tweet.created_at).toLocaleString()}</small>
+                    </div>
+                `;
+                tweetsContainer.innerHTML += tweetElement;
+            });
+        }
+
+        // Wywołanie funkcji
+        fetchTweets();
+    </script>
+</body>
+</html>
